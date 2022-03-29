@@ -1,0 +1,39 @@
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #EAEAEA;
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+nav {
+    background-color: #686868;
+    width: 100%;
+    height: 60px;
+}
+
+nav span {
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:30px;
+    padding-top: 10px;
+}
+
+
+main {
+    background-color: #F6F6F6;
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 95vh;
+    padding-bottom: 1rem;
+}
+
+#hidden {
+    visibility: hidden;
+}

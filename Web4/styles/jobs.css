@@ -1,0 +1,50 @@
+.container {
+    width: 700px;
+    border: 1px solid gray;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.title {
+    border-bottom: 1px solid gray;
+    background-color: #C4C4C4;
+    width: 100%;
+    padding: 0.3rem 4rem;
+}
+
+.job-card {
+    display:flex;
+    border-bottom: 1px solid gray;
+}
+
+.profile {
+    padding: 1rem;
+    padding-right: 2rem;
+}
+
+.profile img {
+    width: 75px;
+}
+
+.job-information {
+    padding: 10px;
+}
+
+.job-information span {
+    padding-left: 0.5rem;
+    font-size: 14px;
+    color: #3A3A3A;
+}
+
+.job-information img{
+    width: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+}

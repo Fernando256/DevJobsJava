@@ -1,0 +1,62 @@
+.container-job {
+    display: flex;
+    padding: 4rem;
+    justify-content: space-around;
+}
+
+.job-information {
+    padding: 2rem 0;
+}
+
+.date-published {
+    display: flex;
+    padding-top: 1rem;
+}
+
+.date-published img {
+    width: 20px;
+}
+
+.date-published span {
+    padding-left: 0.5rem;
+    font-size: 15px;
+    color: #535353;
+}
+
+.job-details button {
+    margin-top: 1rem;
+    border: 0;
+    background-color: #6096FE;
+    color: #FFFFFF;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.profile img {
+    width: 120px;
+    margin-right: 1rem;
+}
+
+#candidate {
+    padding-left: 7.3rem;
+}
+
+.tables {
+    background-color: #FCFCFC;
+    margin: 0 7.3rem;
+    margin-bottom: 5rem;
+}
+
+.tables table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tables td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
