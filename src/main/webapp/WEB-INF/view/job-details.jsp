@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/job-details.css">
+    <link rel="stylesheet" href="../../../../../Web4/styles/layout.css">
+    <link rel="stylesheet" href="../../../../../Web4/styles/job-details.css">
     <title>Job Details</title>
 </head>
 <body>
@@ -39,15 +39,15 @@
                 <div class="job-information">
                     <p>Salário: R$ 3.000,00</p>
                     <div class="date-published">
-                        <img src="images/clock.png" alt="clock">
+                        <img src="../../../../../Web4/images/clock.png" alt="clock">
                         <span>Há 2 dias</span>
                     </div>
 
                 </div>
-                <a href="app-job.html"><button>Aplicar-se</button></a>
+                <a href="/devjobs/vaga/1/aplicar"><button>Aplicar-se</button></a>
             </div>
             <div class="profile">
-                <img src="images/perfil.png" alt="profile">
+                <img src="../../../../../Web4/images/perfil.png" alt="profile">
             </div>
         </div>
         <hr/>

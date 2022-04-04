@@ -5,11 +5,11 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "HomeController", value = "/")
-public class HomeController extends HttpServlet {
+@WebServlet(name = "RegisterController", value = "/registrar/vaga")
+public class RegisterController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/webapp/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/view/register.jsp").forward(request, response);
     }
 
     @Override
