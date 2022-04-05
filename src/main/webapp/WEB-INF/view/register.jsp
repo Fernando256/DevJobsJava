@@ -1,40 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../../../../Web4/styles/layout.css">
-    <link rel="stylesheet" href="../../../../../Web4/styles/register.css">
-    <title>Register</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <span>DevJobs</span>
-        </nav>
-    </header>
-    <main>
-        <form action="/devjobs/vagas" method="GET">
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<t:template>
+    <jsp:body>
+        <head>
+            <link rel="stylesheet" href="assets/resources/styles/register.css">
+        </head>
+        <form action="registrar" method="POST">
             <h2>Cadastro de Vaga</h2>
             <div class="input-information">
                 <p>Nome da Empresa:</p>
-                <input type="text">
+                <input type="text" name="company-name">
             </div>
             <div class="input-information">
                 <p>Tipo da vaga:</p>
-                <input type="text">
+                <input type="text" name="job-type">
             </div>
             <div class="input-information">
                 <p>Descrição:</p>
-                <textarea rows="7" cols="50"></textarea>
+                <textarea rows="7" cols="50" name="description"></textarea>
             </div>
             <div class="buttons">
                 <input type="submit" value="Enviar" id="send-button">
                 <a href="/devjobs/"><input type="button" value="Cancelar" id="cancel-button"></a>
             </div>
         </form>
-    </main>
-</body>
+    </jsp:body>
+</t:template>
 </html>

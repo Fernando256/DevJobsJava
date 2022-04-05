@@ -1,15 +1,15 @@
-package br.edu.utfpr.devjobs;
+package br.edu.utfpr.devjobs.controller;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "RegisterController", value = "/registrar/vaga")
-public class RegisterController extends HttpServlet {
+@WebServlet(name = "PostController", value = "/post-test")
+public class PostController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/view/register.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/view/result-post.jsp").forward(request, response);
     }
 
     @Override

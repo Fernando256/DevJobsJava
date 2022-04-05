@@ -1,4 +1,4 @@
-package br.edu.utfpr.devjobs;
+package br.edu.utfpr.devjobs.controller;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

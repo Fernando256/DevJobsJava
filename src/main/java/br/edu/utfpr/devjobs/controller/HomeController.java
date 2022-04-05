@@ -1,15 +1,15 @@
-package br.edu.utfpr.devjobs;
+package br.edu.utfpr.devjobs.controller;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "AppJobController", value = "/vaga/1/aplicar")
-public class AppJobController extends HttpServlet {
+@WebServlet(name = "HomeController", value = "")
+public class HomeController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/view/app-job.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/view/index.jsp").forward(request, response);
     }
 
     @Override

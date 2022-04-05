@@ -1,11 +1,13 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
-<%--<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>--%>
-<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>--%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <t:template>
     <jsp:body>
-        <main>
+        <head>
+            <link rel="stylesheet" href="assets/resources/styles/index.css"></link>
+        </head>
             <span id="hidden">a</span>
             <div class="container">
                 <div class="title">
@@ -22,7 +24,6 @@
                     </div>
                 </div>
             </div>
-        </main>
     </jsp:body>
 </t:template>
 
