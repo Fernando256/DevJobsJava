@@ -20,7 +20,7 @@
                     </div>
                     <div class="vacancy-container">
                         <span>Quer cadastrar uma vaga de emprego?</span>
-                        <a href="/devjobs/registrar/vaga"><button>Cadastrar</button></a>
+                        <a href="/devjobs/registrar"><button>Cadastrar</button></a>
                     </div>
                 </div>
             </div>

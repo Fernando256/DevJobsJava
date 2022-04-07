@@ -1,6 +1,6 @@
 package br.edu.utfpr.devjobs.controller;
 
-import br.edu.utfpr.devjobs.entities.Candidate;
+import br.edu.utfpr.devjobs.model.domain.Candidate;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

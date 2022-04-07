@@ -1,6 +1,6 @@
 package br.edu.utfpr.devjobs.controller;
 
-import br.edu.utfpr.devjobs.entities.Company;
+import br.edu.utfpr.devjobs.model.domain.Vacancy;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -20,12 +20,12 @@ public class RegisterController extends HttpServlet {
         String jobType  = request.getParameter("job-type");
         String description = request.getParameter("description");
 
-        Company company = new Company(companyName, jobType, description);
+        Vacancy vacancy = new Vacancy(companyName, jobType, description);
 
-        request.setAttribute("flash.company", company);
-        System.out.println(company.getName());
-        System.out.println(company.getType());
-        System.out.println(company.getDescription());
+        request.setAttribute("flash.company", vacancy);
+        System.out.println(vacancy.getName());
+        System.out.println(vacancy.getType());
+        System.out.println(vacancy.getDescription());
 
         response.sendRedirect("post-test");
     }
