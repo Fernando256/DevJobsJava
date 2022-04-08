@@ -1,6 +1,7 @@
 package br.edu.utfpr.devjobs.controller;
 
 import br.edu.utfpr.devjobs.model.domain.Vacancy;
+import br.edu.utfpr.devjobs.service.VacancyService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -9,6 +10,7 @@ import java.io.IOException;
 
 @WebServlet(name = "RegisterController", value = "/registrar")
 public class RegisterController extends HttpServlet {
+    VacancyService vacancyService = new VacancyService();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/view/register.jsp").forward(request, response);
@@ -22,6 +24,7 @@ public class RegisterController extends HttpServlet {
 
         Vacancy vacancy = new Vacancy(companyName, jobType, description);
 
+        vacancyService.save(vacancy);
         request.setAttribute("flash.company", vacancy);
         System.out.println(vacancy.getName());
         System.out.println(vacancy.getType());

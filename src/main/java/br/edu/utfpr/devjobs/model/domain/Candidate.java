@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "candidates")
-@Data(staticConstructor = "of")
+@Data
 @NoArgsConstructor
 @RequiredArgsConstructor(access = AccessLevel.PUBLIC)
 public class Candidate {
