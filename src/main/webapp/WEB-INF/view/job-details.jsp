@@ -11,60 +11,48 @@
         <div class="container-job">
             <div class="job-details">
                 <div class="title">
-                    <h2>Desenvolvedor Back-end Node.js JR</h2>
+                    <h2>${vacancy.name}</h2>
                 </div>
                 <div class="description">
-                    <p>Requisitos e Qualificações:</p>
+                    <p>${vacancy.type}:</p>
                     <span>
-                        NodeJS;<br/>
-                        NestJS;<br/>
-                        Typescript;<br/>
-                        Modelagem de API;<br/>
-                        Conhecimento em TDD e BDD;<br/>
-                        Desenvolvimento de micro serviço;<br/>
-                        Integração com os seguintes protocolos: HTTP, SOAP, Socket (desejável);<br/>
-                        Experiência com web socket, SSE - Server Sent Event (desejável);<br/>
-                        Experiência com Design Pattern;<br/>
+                        ${vacancy.description}
                     </span>
                 </div>
                 <div class="job-information">
-                    <p>Salário: R$ 3.000,00</p>
+                    <p>Salário: ${vacancy.salary}</p>
                     <div class="date-published">
                         <img src="assets/resources/images/clock.png" alt="clock">
-                        <span>Há 2 dias</span>
+                        <span>Criada em: ${vacancy.date.getDayOfMonth()}/${vacancy.date.getMonthValue()}/${vacancy.date.getYear()}</span>
                     </div>
 
                 </div>
-                <a href="/devjobs/vaga/1/aplicar"><button>Aplicar-se</button></a>
+                <a href="/devjobs/vaga/aplicar?id=${vacancy.id}"><button>Aplicar-se</button></a>
             </div>
             <div class="profile">
                 <img src="assets/resources/images/perfil.png" alt="profile">
             </div>
         </div>
-        <hr/>
-        <div class="title" id="candidate">
-            <h2>Candidatos</h2>
-        </div>
-        <div class="tables">
-            <table>
-                <tr>
-                  <th>Nome</th>
-                  <th>Email</th>
-                </tr>
-                <tr>
-                  <td>Alfreds Futterkiste</td>
-                  <td>Maria Anders</td>
-                </tr>
-                <tr>
-                  <td>Centro comercial Moctezuma</td>
-                  <td>Francisco Changa</td>
-                </tr>
-                <tr>
-                  <td>Ernst Handel</td>
-                  <td>Roland Mendel</td>
-                </tr>
-              </table>
-        </div>
+        <c:if test="${not empty candidates}">
+            <hr/>
+            <div class="title" id="candidate">
+                <h2>Candidatos</h2>
+            </div>
+            <div class="tables">
+                <table>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                    </tr>
+                    <c:forEach var="candidate" items="${candidates}">
+                        <tr>
+                          <td>${candidate.name}</td>
+                          <td>${candidate.email}</td>
+                        </tr>
+                    </c:forEach>
+                </table>
+            </div>
+        </c:if>
     </jsp:body>
 </t:template>
 

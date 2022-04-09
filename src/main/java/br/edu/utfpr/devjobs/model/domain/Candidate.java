@@ -18,5 +18,9 @@ public class Candidate {
     private String name;
     @NonNull
     private String email;
+    @ManyToOne
+    @JoinColumn(name = "vacancy_id")
+    @NonNull
+    private Vacancy vacancy;
 
 }

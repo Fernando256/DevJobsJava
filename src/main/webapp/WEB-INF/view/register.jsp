@@ -19,6 +19,10 @@
                 <input type="text" name="job-type">
             </div>
             <div class="input-information">
+                <p>Salario:</p>
+                <input type="text" name="salary">
+            </div>
+            <div class="input-information">
                 <p>Descrição:</p>
                 <textarea rows="7" cols="50" name="description"></textarea>
             </div>

@@ -7,6 +7,8 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(name = "RegisterController", value = "/registrar")
 public class RegisterController extends HttpServlet {
@@ -21,8 +23,11 @@ public class RegisterController extends HttpServlet {
         String companyName  = request.getParameter("company-name");
         String jobType  = request.getParameter("job-type");
         String description = request.getParameter("description");
+        String salary = request.getParameter("salary");
 
-        Vacancy vacancy = new Vacancy(companyName, jobType, description);
+        Vacancy vacancy = new Vacancy(companyName, jobType, salary, description);
+
+        List<Vacancy> vacancies = vacancyService.findAll();
 
         vacancyService.save(vacancy);
         request.setAttribute("flash.company", vacancy);
@@ -30,6 +35,6 @@ public class RegisterController extends HttpServlet {
         System.out.println(vacancy.getType());
         System.out.println(vacancy.getDescription());
 
-        response.sendRedirect("post-test");
+        response.sendRedirect("vagas");
     }
 }

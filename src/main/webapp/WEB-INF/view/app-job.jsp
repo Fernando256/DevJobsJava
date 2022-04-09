@@ -8,7 +8,7 @@
         <head>
             <link rel="stylesheet" href="assets/resources/styles/register.css">
         </head>
-            <form action="/devjobs/vaga/1/aplicar" method="POST">
+            <form action="/devjobs/vaga/aplicar" method="POST">
             <h2>Dados do candidato:</h2>
             <div class="input-information">
                 <p>Nome:</p>
@@ -18,9 +18,10 @@
                 <p>E-mail:</p>
                 <input type="email" name="email">
             </div>
+                <input type="hidden" name="id" value="${id}">
             <div class="buttons">
                 <input type="submit" value="Enviar" id="send-button">
-                <a href="/devjobs/vaga/detalhes/1"><input type="button" value="Cancelar" id="cancel-button"></a>
+                <a href="/devjobs/vaga/detalhes?id=${id}"><input type="button" value="Cancelar" id="cancel-button"></a>
             </div>
         </form>
     </jsp:body>
