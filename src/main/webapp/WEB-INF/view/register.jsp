@@ -20,7 +20,7 @@
             </div>
             <div class="input-information">
                 <p>Salario:</p>
-                <input type="text" name="salary">
+                <input type="text" id="salary" name="salary">
             </div>
             <div class="input-information">
                 <p>Descrição:</p>
@@ -31,6 +31,20 @@
                 <a href="/devjobs/"><input type="button" value="Cancelar" id="cancel-button"></a>
             </div>
         </form>
+        <script>
+            window.onload = function (){
+                $('#salary').mask("R$ 0.000,00");
+                localStorage.setItem("devjobs", "Seja bem vindo ao devjobs!");
+
+                $.ajax({
+                    url: 'http://localhost:8080/devjobs/registrar',
+                    method: 'get',
+                    success: function() {
+                        alert("Cadastre uma vaga para sua empresa!");
+                    }
+                });
+            }
+        </script>
     </jsp:body>
 </t:template>
 </html>

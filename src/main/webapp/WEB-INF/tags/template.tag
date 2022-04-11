@@ -32,5 +32,8 @@
 <main id="content">
     <jsp:doBody></jsp:doBody>
 </main>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="assets/libraries/jquery.mask.min.js"></script>
+
 </body>
 </html>
